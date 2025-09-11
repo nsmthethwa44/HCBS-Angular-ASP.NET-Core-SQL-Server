@@ -1,0 +1,107 @@
+<div class="overview">
+  <div class="title">
+    <h3>Appointments</h3>
+    <div class="buttons">
+      <button class="btn"><i class="fa-solid fa-download"></i>Export</button>
+    </div>
+  </div>
+
+  <div class="container-box">
+    <div class="table-container">
+      <div class="table-title">
+        <h3>All Appointments</h3>
+
+            <div class="filter-download">
+          <label>
+            Filter
+            <select [(ngModel)]="selectedStatus" class="textBox">
+              <option value="">All</option>
+              <option value="Pending">Pending</option>
+              <option value="Approved">Approved</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="search-filter">
+          <label>
+            Search
+            <input type="text" [(ngModel)]="searchTerm" placeholder="Search doctor name" class="textBox" />
+          </label>
+      </div>
+ 
+      <div class="table-content" >
+        <table class="table" *ngIf="pagedAppointments.length > 0; else noData">
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Patient</th>
+              <th>Image</th>
+              <th>Doctor</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Gender</th>
+              <th>Status</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of pagedAppointments">
+              <td>
+                <img
+                  src="assets\img\male_user_40px.png"
+                  alt="Patient"
+                  class="image"
+                />
+              </td>
+              <td>{{ appointment.patientName }}</td>
+              <td><img [src]="'https://localhost:7197' + appointment.doctorImage" alt="Doctor image" class="image"></td>
+              <td>Dr.{{ appointment.doctorName }}</td>
+              <td>{{ appointment.appointmentDate | date: 'MMM d, y' }}</td>
+              <td>{{ appointment.appointmentDate | date: 'h:mm a' }}</td>
+                <td class="null">NULL</td>
+              <td>
+                <span
+                  class="status"
+                  [ngClass]="getStatusClass(appointment.status)"
+                >
+                  {{ getStatusText(appointment.status) }}
+                </span>
+              </td>
+                <td class="null">NULL</td>
+            <td>
+                <div class="buttons">
+                  <i class="fa-solid fa-eye"></i>
+                  <i
+                    *ngIf="appointment.status === 0"
+                    class="fa-solid  fa-circle-check"
+                    (click)="getApproveAppointment(appointment.id)"
+                  ></i>
+                  <span *ngIf="appointment.status !== 0"><i class="fa-solid fa-minus"></i></span>
+
+                  <i class="fa-solid fa-trash-can"></i>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+            <ng-template #noData>
+          <p>No appointments booked.</p>
+        </ng-template>
+      </div>
+      
+          
+    </div>
+
+      <!-- Pagination -->
+          <div class="pagination-controls" *ngIf="totalPages > 1">
+            <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+            <span>Page {{ currentPage }} of {{ totalPages }}</span>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+          </div>
+          
+  </div>
+</div>
+

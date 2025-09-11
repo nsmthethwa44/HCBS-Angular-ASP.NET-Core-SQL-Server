@@ -1,0 +1,45 @@
+<div class="stats">
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-calendar-check"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.total || 0 }}</h4>
+        <h3>Handled Appointments</h3>
+      </div>
+    </div>
+    <p><span class="total">Status:</span> All appointments linked to you</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-circle-check approved"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.approved || 0 }}</h4>
+        <h3>Approved</h3>
+      </div>
+    </div>
+    <p><span class="approved">Status:</span> You’ve confirmed</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-hourglass-start pending"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.pending || 0 }}</h4>
+        <h3>Pending</h3>
+      </div>
+    </div>
+    <p><span class="pending">Status:</span> Awaiting your action</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-circle-xmark cancelled"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.cancelled || 0 }}</h4>
+        <h3>Cancelled</h3>
+      </div>
+    </div>
+    <p><span class="cancelled">Status:</span> Cancelled or declined</p>
+  </div>
+</div>

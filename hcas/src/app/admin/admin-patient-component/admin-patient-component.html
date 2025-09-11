@@ -1,0 +1,64 @@
+<div class="overview">
+    <div class="content">
+        <div class="title">
+            <h3>Patient List</h3>
+
+            <div class="buttons">
+                <button class="btn"><i class="fa-solid fa-plus"></i>Add Patient</button>
+            </div>
+        </div>
+
+        <div class="users">
+             <div class="box-title">
+            <h3>All Patients</h3>
+           <div class="search">
+             <label for="">Search 
+                <input type="text" class="textBox" placeholder="Search patient name">
+            </label>
+           </div>
+        </div>
+       <div class="table-container">
+                        <div class="table-content">
+                            @if(patients && patients.length > 0){
+                                <table>
+                                <thead>
+                                    <tr>
+                                        <th>Photo</th>
+                                        <th>Name</th>
+                                        <th>Gender</th>
+                                        <th>Email</th>
+                                        <th>Date Of Birth</th>
+                                        <th>Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                             @for (item of patients.slice(0, 10); track $index) {
+                                <tr>
+                                    <td><img src="assets/img/male_user_40px.png" alt="Patient" class="image"></td>
+                                    <td>{{item.fullName}}</td>
+                                    <td class="null">NULL</td>
+                                    <td>{{item.email}}</td>
+                                    <td class="null">NULL</td>
+                                    <td class="null">NULL</td>
+                                    <td class="null">NULL</td>
+                                    <td>
+                                    <div class="buttons">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <i class="fa-solid fa-pen"></i>
+                                        <i class="fa-solid fa-trash-can" (click)="deletePatient(item.id)"></i>
+                                    </div>
+                                    </td>
+                                </tr>
+                                }
+                                </tbody>
+                            </table>
+                            }@else {
+                                <p>Patients not found.</p>
+                            }
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>

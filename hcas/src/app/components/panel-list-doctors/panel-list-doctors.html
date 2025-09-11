@@ -1,0 +1,22 @@
+<div class="doctor-panel">
+       <div class="box">
+                    <h3>Doctor List<a routerLink={{doctorsLink}}  class="view">View All</a></h3>
+
+                    <div class="doctors-list">
+                        @if(doctors && doctors.length > 0){
+                            <div *ngFor="let doctor of doctors.slice(0, 12)" class="doctor-card">
+                                <div class="box-img">
+                                    <img [src]="'https://localhost:7197' + doctor.profileImagePath" alt="Profile" class="img-box">
+                                    <div class="text">
+                                        <h3>Dr.{{ doctor.fullName }}</h3>
+                                        <p>{{ doctor.email }}</p>
+                                    </div>
+                                </div>
+                                   <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        }@else {
+                            <p>Doctors not found.</p>
+                        }
+                    </div>
+                </div>
+</div>

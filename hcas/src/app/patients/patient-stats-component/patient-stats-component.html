@@ -1,0 +1,45 @@
+<div class="stats">
+  <div class="box">
+    <div class="icon-text">
+        <i class="fa-solid fa-notes-medical"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.total || 0}}</h4>
+        <h3>Total Appointments</h3>
+      </div>
+    </div>
+    <p><span class="total">Status:</span> All recorded appointments</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-check-circle approved"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.approved || 0}}</h4>
+        <h3>Approved</h3>
+      </div>
+    </div>
+    <p><span class="approved">Status:</span> Confirmed appointments</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-hourglass-half pending"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.pending || 0}}</h4>
+        <h3>Pending</h3>
+      </div>
+    </div>
+    <p><span class="pending">Status:</span> Waiting for approval</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-ban cancelled"></i>
+      <div class="text">
+        <h4>{{ appointmentStats?.cancelled || 0}}</h4>
+        <h3>cancelled</h3>
+      </div>
+    </div>
+    <p><span class="cancelled">Status:</span> Rejected or withdrawn</p>
+  </div>
+</div>

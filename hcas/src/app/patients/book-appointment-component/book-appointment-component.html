@@ -1,0 +1,107 @@
+<div class="overview">
+    <div class="title">
+        <h3>Appointment Booking</h3>
+       <div class="buttons"><button class="btn" (click)="onDownload()"><i class="fa-solid fa-download"></i>Export</button></div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="submitAppointment()" class="booking-form">
+        <h3>New Appointment Form</h3>
+
+        <div class="inputs-box">
+            <label>Doctor
+                    <select formControlName="doctorId" class="textBox">
+                    <option value="" disabled>Select a doctor</option>
+                    <option *ngFor="let doctor of doctors" [value]="doctor.id">
+                    Dr.{{ doctor.fullName }}
+                    </option>
+                </select>
+                </label>
+
+                <label>Appointment Date
+                    <input type="datetime-local" formControlName="appointmentDate" class="textBox"/>
+                </label>
+        </div>
+        
+       <div class="buttons">
+         <button type="submit" [disabled]="form.invalid" class="btn">Book Appointment</button>
+       </div>
+
+      
+</form>
+
+<div class="container-box">
+<div class="table-container">
+  <div class="table-title">
+    <h3>All Appointments</h3>
+
+    <div class="filter-download">
+         <label>
+        Search
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Search doctor name" class="textBox" />
+      </label>
+
+      <label>
+        Filter
+        <select [(ngModel)]="selectedStatus" class="textBox">
+          <option value="">All</option>
+          <option value="Pending">Pending</option>
+          <option value="Approved">Approved</option>
+          <option value="Cancelled">Cancelled</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="table-content">
+    <table class="table" *ngIf="pagedAppointments.length > 0; else noData">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of pagedAppointments">
+          <td>
+            <img [src]="'https://localhost:7197' + item.doctorImage" alt="Doctor" class="image" />
+          </td>
+          <td>Dr. {{ item.doctorName }}</td>
+          <td>{{ item.appointmentDate | date: 'MMM d, y' }}</td>
+          <td>{{ item.appointmentDate | date: 'h:mm a' }}</td>
+          <td>
+            <span class="status" [ngClass]="getStatusClass(item.status)">
+              {{ getStatusText(item.status) }}
+            </span>
+          </td>
+          <td>
+            <div class="buttons">
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-xmark" (click)="cancelAppointments(item.id)"></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #noData>
+      <p>No appointments found.</p>
+    </ng-template>
+  </div>
+
+  <!-- Pagination -->
+    <div class="pagination-controls" *ngIf="totalPages > 1">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+</div>
+
+</div>
+
+
+</div>

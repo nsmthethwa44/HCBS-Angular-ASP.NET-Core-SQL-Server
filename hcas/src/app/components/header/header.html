@@ -1,0 +1,31 @@
+<header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <a href="#">
+               <h2><i class="fa-solid fa-heart-pulse"></i>Healthcare</h2>
+            </a>
+        </div>
+
+        <div class="navbar" [class.active] ="isNavBarOpen">
+            <ul class="nav">
+                <li><a href="/" class="active" (click)="closeNavbar()">Home</a></li>
+                <li><a href="/about" (click)="closeNavbar()">About</a></li>
+                <li><a href="/services" (click)="closeNavbar()">Services</a></li>
+                <li><a href="team" (click)="closeNavbar()">Doctors</a></li>
+                <li><a href="blog" (click)="closeNavbar()">Blog</a></li>
+                <li><a href="contact" (click)="closeNavbar()">Contact</a></li>
+
+                 <div class="close-box" (click)="closeNavbar()"><i class="fa-solid fa-xmark"></i></div>
+            </ul>
+        </div>
+
+         <div class="buttons">
+           <div class="search-icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
+               <a routerLink="/login">
+                 <button class="btn">Book Appointment <i class="fa-solid fa-arrow-right-long"></i></button>
+               </a>
+            </div>
+
+            <div class="menu-box" (click)="toggleNavBar()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+</header>

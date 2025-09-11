@@ -1,0 +1,36 @@
+<section class="banner">
+    <div class="content">
+        <div class="container">
+            <h1 class="heading">Best Doctors</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section team-page">
+    <div class="container">
+        <div class="container-box">
+              @for (item of doctors.slice(0, 8); track $index) {
+                <div class="box">
+                    <div class="box-img">
+                         <img [src]="'https://localhost:7197' + item.profileImagePath" alt="Profile" class="img-box">
+                        <div class="sci">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>Dentist</span>
+                        <h3>Dr.{{ item.fullName }}</h3>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<div class="reviews-box">
+    <app-reviews></app-reviews>
+</div>
+
+<app-cta></app-cta>

@@ -1,0 +1,67 @@
+<div class="stats">
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-bed-pulse cancelled"></i>
+      <div class="text">
+        <h4>{{ userSummary?.patients || 0}}</h4>
+        <h3>Total Patients</h3>
+      </div>
+    </div>
+    <p><span class="cancelled">Patients:</span> Registered on the platform</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-stethoscope"></i>
+      <div class="text">
+        <h4>{{ userSummary?.doctors || 0}}</h4>
+        <h3>Total Doctors</h3>
+      </div>
+    </div>
+    <p><span>Doctors:</span> Actively listed professionals</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-regular fa-calendar-days pending"></i>
+      <div class="text">
+        <h4>{{ appointmentSummary?.total || 0}}</h4>
+        <h3>Total Appointments</h3>
+      </div>
+    </div>
+    <p><span class="pending">All:</span> Booked appointments overall</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-check-circle approved"></i>
+      <div class="text">
+        <h4>{{ appointmentSummary?.approved || 0}}</h4>
+        <h3>Approved Appointments</h3>
+      </div>
+    </div>
+    <p><span class="approved">Status:</span> Confirmed by doctors</p>
+  </div>
+
+  <!-- <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-hourglass-half"></i>
+      <div class="text">
+        <h4>{{ appointmentSummary?.pending }}</h4>
+        <h3>Pending Appointments</h3>
+      </div>
+    </div>
+    <p><span>Status:</span> Awaiting confirmation</p>
+  </div>
+
+  <div class="box">
+    <div class="icon-text">
+      <i class="fa-solid fa-ban"></i>
+      <div class="text">
+        <h4>{{ appointmentSummary?.cancelled }}</h4>
+        <h3>Cancelled Appointments</h3>
+      </div>
+    </div>
+    <p><span>Status:</span> Cancelled or declined</p>
+  </div> -->
+</div>

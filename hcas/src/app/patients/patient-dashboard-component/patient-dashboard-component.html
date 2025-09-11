@@ -1,0 +1,138 @@
+<div class="overview">
+    <div class="title">
+        <h3>Dashboard</h3>
+
+         <span class="date"><i class="fa-regular fa-calendar-days"></i>{{ getDate() | date: 'MMM d, y, h:m a' }}</span>
+    </div>
+
+   <app-patient-stats-component></app-patient-stats-component>
+
+    <div class="content-box">
+        <div class="left">
+            <div class="box">
+                <h3>Upcoming Appointments <a routerLink="/patient/appointments" class="view">View All</a></h3>
+
+                @if ( upcomingAppointments &&  upcomingAppointments.length > 0) {
+                        <div class="table-container">
+                            <div class="table-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                    <th>Image</th>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let appointment of upcomingAppointments.slice(0, 2)">
+                                    <td>
+                                        <img
+                                        [src]="'https://localhost:7197' + appointment.doctorImage || 'assets/img/male_user_40px.png'"
+                                        alt="Doctor"
+                                        class="image"
+                                        />
+                                    </td>
+                                    <td>Dr. {{ appointment.doctorName }}</td>
+                                    <td>{{ appointment.appointmentDate | date: 'MMM d, y' }}</td>
+                                    <td>{{ appointment.appointmentDate | date: 'h:mm a' }}</td>
+                                    <td>
+                                         <span
+                                        class="status"
+                                        [ngClass]="getStatusClass(appointment.status)"
+                                        >
+                                        {{ getStatusText(appointment.status) }}
+                                        </span>
+                                    </td>
+                                     <td>
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <i class="fa-solid fa-pen"></i>
+                                           <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        }@else{
+                            <p>No upcoming appointments scheduled.</p>
+                        }
+            </div>
+            <div class="box">
+                <h3>Recent Appointments <a routerLink="/patient/appointments" class="view">View All</a></h3>
+                <div class="table-container">
+                    @if(appointments && appointments.length > 0){
+                         <div class="table-content">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Doctor</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let item of appointments.slice(0, 5)">
+                                    <td>
+                                    <img [src]="'https://localhost:7197' + item.doctorImage" alt="Doctor"  class="image"/>
+                                    </td>
+                                    <td>Dr. {{ item.doctorName }}</td>
+                                    <td>{{ item.appointmentDate | date: 'MMM d, y' }}</td>
+                                    <td>{{ item.appointmentDate | date: 'h:mm a' }}</td>
+                                    <td>
+                                        <span
+                                        class="status"
+                                        [ngClass]="getStatusClass(item.status)"
+                                        >
+                                        {{ getStatusText(item.status) }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <i class="fa-solid fa-pen"></i>
+                                           <i class="fa-solid fa-xmark"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                             }@else {
+                                <p>No recent appointments found.</p>
+                            }
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <app-panel-list-doctors></app-panel-list-doctors>
+        </div>
+        
+    </div>
+</div>
+
+
+     <!-- <div class="box">
+            <div class="profile">
+                <div class="text-box">
+                    <div class="box-img"><img src="assets/img/male_user_40px.png" alt="" class="img-box"></div>
+                    <div class="text">
+                        <h3>Zama</h3>
+                        <p>{{getPatientEmail()}}</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <span>Your profile is incomplete</span>
+                    <button class="btn"><i class="fa-solid fa-pen-to-square"></i>Edit Profile</button>
+                </div>
+            </div>
+        </div> -->

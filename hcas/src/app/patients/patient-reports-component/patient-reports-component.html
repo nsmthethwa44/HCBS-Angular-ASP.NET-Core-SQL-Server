@@ -1,0 +1,85 @@
+<div class="overview">
+      <div class="title">
+        <h3>Patient Report</h3>
+        <div class="buttons">
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i> Export</button>
+        </div>
+    </div>
+
+    <app-patient-stats-component></app-patient-stats-component>
+
+    <div class="chart-box">
+        <div class="box">
+            <div class="chart">
+                <h3>Patient Appointment Status Breakdown</h3>
+                <ngx-charts-pie-chart
+                     [results]="appointmentStatusChart"
+                    [view]="view"
+                    [legend]="true"
+                    [explodeSlices]="false"
+                    [doughnut]="false"
+                    [labels]="true"
+                    [customColors]="customColors">
+                </ngx-charts-pie-chart>
+            </div>
+        </div>
+         <div class="box">
+            <div class="chart">
+                <h3>Patient Appointment Counts</h3>
+                <ngx-charts-bar-vertical
+                    [view]="view"
+                    [results]="appointmentStatusChart"
+                    [scheme]="'vivid'"
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    [showXAxisLabel]="true"
+                    [showYAxisLabel]="true"
+                    [customColors]="customColors"
+                    xAxisLabel="Status"
+                    yAxisLabel="Count">
+                </ngx-charts-bar-vertical>
+            </div>
+        </div>
+         <div class="box">
+            <div class="chart">
+                <h3>Top Doctors (By Approved Appointments)</h3>
+                <div class="table-container">
+                    @if (topDoctors && topDoctors.length > 0) {
+                            <div class="table-content">
+                            <table>
+                                <thead>
+                                    <tr>
+                                    <th>Photo</th>
+                                    <th>Doctor</th>
+                                    <th>Appointments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let doc of topDoctors.slice(0,4)">
+                                    <td>
+                                        <img [src]="'https://localhost:7197' + doc.doctorImage" alt="Profile" class="image">
+                                    </td>
+                                    <td>Dr.{{ doc.doctorName }}</td>
+                                    <td>{{ doc.count }}</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            }@else {
+                                <p>Top doctors not available.</p>
+                            }
+                </div>
+            </div>
+        </div>
+         <div class="box">
+            <div class="chart">
+                <h3>Patient Status By Category</h3>
+               <ngx-charts-number-card
+                    [results]="appointmentStatusChart"
+                     [view]="view"
+                    [customColors]="customColors">
+                </ngx-charts-number-card>
+            </div>
+        </div>
+    </div>
+</div>

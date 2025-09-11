@@ -1,0 +1,30 @@
+<div class="overview">
+    <div class="content">
+        <div class="title">
+        <h3>Doctor List</h3>
+          <span class="date"><i class="fa-regular fa-calendar-days"></i>{{ getDate() | date: 'MMM d, y, h:m a' }}</span>
+    </div>
+
+    <div class="doctors-box">
+        @for (doc of doctors; track $index) {
+        <div class="box">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <div class="box-img"> <img [src]="'https://localhost:7197' + doc.profileImagePath" alt="Profile" class="img-box"></div>
+            <div class="text">
+                <h3>Dr.{{doc.fullName}}</h3>
+                <p>Doctor</p>
+
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+                <span>Message</span>
+            </div>
+        </div>
+        }
+
+    </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<!-- admin-component.html -->
+<div class="dashboard">
+  <!-- sidebar  -->
+ <app-sidebar [role]="'doctor'"></app-sidebar>
+
+ <!-- main  -->
+  <div class="main">
+    <!-- header -->
+     <header class="header">
+      <div class="content">
+        <div class="search-menu">
+           <div class="menu" (click)="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="textBox" placeholder="search patient...">
+              </div>
+        </div>
+      
+
+        <div class="user">
+         <div class="alert"><i class="fa-solid fa-bell"></i><span>0</span></div>
+
+          <div class="info">
+           <div class="details">
+             <div class="box-img"><img src="assets\img\img-1.jpg" alt="" class="img-box"></div>
+             <div class="text">
+             <h3>{{ getDoctorName()}}</h3>
+              <span>{{ getDoctorEmail()}}</span>
+             </div>
+           </div>
+           <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+     </header>
+    <div class="main-content">
+      <router-outlet />
+    </div>
+
+    <!-- copyright  -->
+     <app-copyright />
+  </div>
+  
+</div>

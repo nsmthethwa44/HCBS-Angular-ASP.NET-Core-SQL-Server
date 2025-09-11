@@ -1,0 +1,25 @@
+<!-- add new doctor modal popup  -->
+  <div class="modal add-doctor" id="modal" *ngIf="addDoctorModal">
+  <div class="container">
+      <form [formGroup]="form" (ngSubmit)="onCreateDoctor()" class="form">
+        <div class="close-Form" (click)="hideModal()"><i class="fa-solid fa-xmark"></i></div>
+        <div class="form-title">
+            <h2>Add New Doctor</h2>
+        </div>
+        <div class="input-box">
+            <label for="">Full Name
+                <input formControlName="fullName" placeholder="e.g Dr Wall Smith" class="textBox">
+            </label>
+            <label for="">Email 
+                <input formControlName="email" placeholder="e.g smith@healthcare.co.za" class="textBox">
+            </label>
+           <label for="">Upload Photo 
+             <input type="file" (change)="onFileChange($event)" class="textBox">
+           </label>
+            <div class="buttons">
+                <button type="submit" class="btn">Create Doctor</button>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>
