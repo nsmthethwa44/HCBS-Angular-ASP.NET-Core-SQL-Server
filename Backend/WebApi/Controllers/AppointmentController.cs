@@ -74,29 +74,60 @@ namespace WebApi.Controllers
 
 
         // get all appointments for admin
+        //[Authorize(Roles = "Admin")]
+        //[HttpGet("all")]
+        //public async Task<ActionResult> GetAll()
+        //{
+        //    var rawData = await _db.Appointments
+        //        .Include(a => a.Patient)
+        //        .Include(a => a.Doctor)
+        //        .OrderByDescending(a => a.Id)
+        //        .ToListAsync();
+
+        //    var data = rawData.Select(a => new AppointmentDTO
+        //    {
+        //        Id = a.Id,
+        //        DoctorId = a.DoctorId,
+        //        AppointmentDate = a.AppointmentDate,
+        //        Status = a.Status,
+        //        PatientName = a.Patient?.FullName ?? "Unknown",
+        //        DoctorName = a.Doctor?.FullName ?? "Unknown",
+        //        DoctorImage = a.Doctor?.ProfileImagePath ?? "Unknown",
+        //    });
+
+        //    return Ok(data);
+        //}
         [Authorize(Roles = "Admin")]
         [HttpGet("all")]
         public async Task<ActionResult> GetAll()
         {
-            var rawData = await _db.Appointments
-                .Include(a => a.Patient)
-                .Include(a => a.Doctor)
-                .OrderByDescending(a => a.Id)
-                .ToListAsync();
-
-            var data = rawData.Select(a => new AppointmentDTO
+            try
             {
-                Id = a.Id,
-                DoctorId = a.DoctorId,
-                AppointmentDate = a.AppointmentDate,
-                Status = a.Status,
-                PatientName = a.Patient?.FullName ?? "Unknown",
-                DoctorName = a.Doctor?.FullName ?? "Unknown",
-                DoctorImage = a.Doctor?.ProfileImagePath ?? "Unknown",
-            });
+                var rawData = await _db.Appointments
+                    .Include(a => a.Patient)
+                    .Include(a => a.Doctor)
+                    .OrderByDescending(a => a.Id)
+                    .ToListAsync();
 
-            return Ok(data);
+                var data = rawData.Select(a => new AppointmentDTO
+                {
+                    Id = a.Id,
+                    DoctorId = a.DoctorId,
+                    AppointmentDate = a.AppointmentDate,
+                    Status = a.Status,
+                    PatientName = a.Patient?.FullName ?? "Unknown",
+                    DoctorName = a.Doctor?.FullName ?? "Unknown",
+                    DoctorImage = a.Doctor?.ProfileImagePath ?? "Unknown",
+                });
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message, stack = ex.StackTrace });
+            }
         }
+
 
 
         // get single doctor appointments
