@@ -36,7 +36,7 @@ jobs:
             return await coredemo.getIDToken()
           result-encoding: string
 
-      # ✅ Install dependencies with legacy-peer-deps
+          # ✅ Install dependencies with legacy-peer-deps
       - name: Install Dependencies
         run: |
           cd hcas
@@ -48,17 +48,17 @@ jobs:
           cd hcas
           npm run build -- --configuration production
 
-      # ✅ Deploy to Azure Static Web Apps
+      # ✅ Deploy to Azure Static Web Apps (skip Oryx build)
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_GROUND_0A36D730F }}
           action: "upload"
-          app_location: "./hcas"
-          api_location: ""
-          output_location: "dist/hcas/browser"
+          app_location: "dist/hcas/browser"
+          skip_app_build: true
           github_id_token: ${{ steps.idtoken.outputs.result }}
+
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
