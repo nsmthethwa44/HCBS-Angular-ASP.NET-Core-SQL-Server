@@ -12,12 +12,12 @@ export class ReportService {
 
     getAppointmentSummary() {
     return this.http.get<{ total: number; approved: number; pending: number; cancelled: number }>(
-      `${this. baseUrl}/appointments-summary`
+      `${this.baseUrl}/appointments-summary`
     );
 }
 
   getUserSummary() {
-    return this.http.get<{ doctors: number; patients: number }>(`${this. baseUrl}/users-summary`);
+    return this.http.get<{ doctors: number; patients: number }>(`${this.baseUrl}/users-summary`);
   }
 
   getTopDoctors() {
