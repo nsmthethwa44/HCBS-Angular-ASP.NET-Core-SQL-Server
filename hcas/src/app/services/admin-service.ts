@@ -5,21 +5,35 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AdminService {
-  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/admin';
+  // private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/admin';
   
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  // get all doctors 
-  getDoctors(){
-    return this.http.get<any[]>(`${this.baseUrl}/get-doctors`);
-  }
+  // // get all doctors 
+  // getDoctors(){
+  //   return this.http.get<any[]>(`${this.baseUrl}/get-doctors`);
+  // }
 
-  getPatients(){
-    return this.http.get<any[]>(`${this.baseUrl}/get-patients`)
-  }
+  // getPatients(){
+  //   return this.http.get<any[]>(`${this.baseUrl}/get-patients`)
+  // }
 
-  // delete a single user 
-    deleteUser(id: number) {
-    return this.http.delete(`${this.baseUrl}/${id}`);
-  }
+  // // delete a single user 
+  //   deleteUser(id: number) {
+  //   return this.http.delete(`${this.baseUrl}/${id}`);
+  // }
+
+private baseUrl = '/api/admin';  // <-- relative to SWA frontend
+constructor(private http: HttpClient) {}
+getDoctors() {
+  return this.http.get<any[]>(`${this.baseUrl}/get-doctors`);
+}
+getPatients() {
+  return this.http.get<any[]>(`${this.baseUrl}/get-patients`);
+}
+// delete a single user
+deleteUser(id: number) {
+  return this.http.delete(`${this.baseUrl}/${id}`);
+}
+
 }
