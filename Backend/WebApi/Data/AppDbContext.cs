@@ -9,5 +9,13 @@ namespace WebApi.Data
 
         public DbSet<UserModel> Users { get; set; }
         public DbSet<AppointmentModel> Appointments { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UserModel>().ToTable("Users");
+            modelBuilder.Entity<AppointmentModel>().ToTable("Appointments");
+
+            // Optional: add constraints, indexes here
+        }
     }
 }

@@ -16,9 +16,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
-
+//builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection")));
 
 
 //jwt
@@ -41,6 +40,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddScoped<TokenServices>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+        policy.AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials()
+              .WithOrigins("http://localhost:4200"));
+});
+
 
 
 var app = builder.Build();
@@ -65,11 +74,13 @@ app.UseStaticFiles();
 
 //CORS 
 app.UseRouting();
-app.UseCors(policy =>
-    policy.AllowAnyOrigin()
-          .AllowAnyMethod()
-          .AllowAnyHeader()
-);
+app.UseCors("AllowFrontend");
+
+//app.UseCors(policy =>
+//    policy.AllowAnyOrigin()
+//          .AllowAnyMethod()
+//          .AllowAnyHeader()
+//);
 app.UseAuthentication();  // if using JWT
 app.UseAuthorization();
 app.MapControllers();

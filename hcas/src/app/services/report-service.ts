@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReportService {
-    private baseUrl = 'https://localhost:7197/api/report';
+    private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/report';
     
     constructor(private http: HttpClient) {}
 

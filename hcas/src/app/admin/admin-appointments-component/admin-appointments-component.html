@@ -57,7 +57,7 @@
                 />
               </td>
               <td>{{ appointment.patientName }}</td>
-              <td><img [src]="'https://localhost:7197' + appointment.doctorImage" alt="Doctor image" class="image"></td>
+              <td><img [src]="'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net' + appointment.doctorImage" alt="Doctor image" class="image"></td>
               <td>Dr.{{ appointment.doctorName }}</td>
               <td>{{ appointment.appointmentDate | date: 'MMM d, y' }}</td>
               <td>{{ appointment.appointmentDate | date: 'h:mm a' }}</td>

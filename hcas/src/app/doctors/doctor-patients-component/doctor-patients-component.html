@@ -10,7 +10,7 @@
             <div class="box" *ngFor="let patient of approvedPatients">
                 <i class="fa-solid fa-ellipsis-vertical"></i>
                 <div class="box-img">
-                <img [src]="patient.profileImagePath ? 'https://localhost:7197' + patient.profileImagePath : 'assets/img/male_user_40px.png'" alt="Patient" class="img-box">
+                <img [src]="patient.profileImagePath ? 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net' + patient.profileImagePath : 'assets/img/male_user_40px.png'" alt="Patient" class="img-box">
                 </div>
                 <div class="text">
                 <h3>{{ patient.fullName }}</h3>

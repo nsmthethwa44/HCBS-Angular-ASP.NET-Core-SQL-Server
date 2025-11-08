@@ -8,7 +8,7 @@ import { jwtDecode } from 'jwt-decode';
 
 // @Injectable({ providedIn: 'root' })
 // export class AuthService {
-//   private baseUrl = 'https://localhost:7197/api/auth';
+//   private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/auth';
   
 //   constructor(private http: HttpClient, private router: Router) {}
 
@@ -33,7 +33,7 @@ import { jwtDecode } from 'jwt-decode';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private baseUrl = 'https://localhost:7197/api/auth';
+  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/auth';
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<AuthResponse[]> {

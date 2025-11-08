@@ -12,7 +12,7 @@ import Swal from 'sweetalert2'
   styleUrl: './add-doctor-component.scss'
 })
 export class AddDoctorComponent {
-  private baseUrl = 'https://localhost:7197/api/admin';
+  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/admin';
 
  @Input() addDoctorModal: boolean = false;
  doctors: any[] = [];

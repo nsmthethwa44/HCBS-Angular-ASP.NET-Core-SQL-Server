@@ -67,7 +67,7 @@
       <tbody>
         <tr *ngFor="let item of pagedAppointments">
           <td>
-            <img [src]="'https://localhost:7197' + item.doctorImage" alt="Doctor" class="image" />
+            <img [src]="'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net' + item.doctorImage" alt="Doctor" class="image" />
           </td>
           <td>Dr. {{ item.doctorName }}</td>
           <td>{{ item.appointmentDate | date: 'MMM d, y' }}</td>

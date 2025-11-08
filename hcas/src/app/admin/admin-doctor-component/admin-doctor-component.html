@@ -34,7 +34,7 @@
                               <tbody>
                              @for (item of doctors.slice(0, 15); track $index) {
                                 <tr>
-                                    <td>  <img [src]="'https://localhost:7197' + item.profileImagePath" alt="Profile" class="image"></td>
+                                    <td>  <img [src]="'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net' + item.profileImagePath" alt="Profile" class="image"></td>
                                     <td>Dr.{{item.fullName}}</td>
                                     <td class="null">NULL</td>
                                     <td>{{item.email}}</td>

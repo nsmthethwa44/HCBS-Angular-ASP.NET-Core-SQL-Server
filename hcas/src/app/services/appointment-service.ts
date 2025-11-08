@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AppointmentService {
-  private baseUrl = 'https://localhost:7197/api/appointment';
+  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/appointment';
 
   constructor(private http: HttpClient) {}
 

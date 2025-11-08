@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AdminService {
-  private baseUrl = 'https://localhost:7197/api/admin';
+  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/admin';
   
   constructor(private http: HttpClient) {}
 
