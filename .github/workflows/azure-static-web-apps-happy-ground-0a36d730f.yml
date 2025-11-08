@@ -15,15 +15,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
 
-      # Optional: Install OIDC Client (you can keep or remove)
+      # Optional: Install OIDC Client
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
 
@@ -31,24 +31,24 @@ jobs:
         uses: actions/github-script@v6
         id: idtoken
         with:
-           script: |
-               const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
-           result-encoding: string
+          script: |
+            const coredemo = require('@actions/core')
+            return await coredemo.getIDToken()
+          result-encoding: string
 
-      # NEW: Install dependencies with legacy peer deps
+      # ✅ Install dependencies with legacy-peer-deps
       - name: Install Dependencies
         run: |
           cd hcas
           npm install --legacy-peer-deps
 
-      # NEW: Build Angular app
+      # ✅ Build Angular app for production
       - name: Build Angular App
         run: |
           cd hcas
           npm run build -- --configuration production
 
-      # Deploy the built app
+      # ✅ Deploy to Azure Static Web Apps
       - name: Deploy to Azure Static Web Apps
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
