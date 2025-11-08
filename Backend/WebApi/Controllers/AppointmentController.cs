@@ -97,7 +97,7 @@ namespace WebApi.Controllers
 
         //    return Ok(data);
         //}
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet("all")]
         public async Task<ActionResult> GetAll()
         {
