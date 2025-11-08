@@ -65,7 +65,7 @@ export const routes: Routes = [
       { path: 'doctors', component: PatientDoctorsComponent, canActivate: [AuthGuard], data: { role: 'Patient' } },
     ]
   },
-    { path: '', component: Home ,
+    { path: '', component: Home,
       children:[
         {path: "", component: LandingPage},
         {path: "about", component: About},
@@ -77,6 +77,6 @@ export const routes: Routes = [
     },
   { path: 'login', component: Login} ,
   { path: 'register', component: Register} ,
-  {path: "**", redirectTo: ""},
+  {path: "**", redirectTo: "/"},
   
 ];
