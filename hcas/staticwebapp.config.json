@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*"]
+  },
+  "routes": [
+    {
+      "route": "/api/*",
+      "serve": "https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/*",
+      "statusCode": 200
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  }
+}
