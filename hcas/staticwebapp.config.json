@@ -1,32 +1,13 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": [
-      "/assets/*",
-      "/*.css",
-      "/*.js",
-      "/*.png",
-      "/*.jpg",
-      "/*.ico",
-      "/*.svg"
-    ]
+    "exclude": ["/assets/*"]
   },
-  "routes": [
-    {
-      "route": "/api/*",
-      "serve": "https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/*",
-      "statusCode": 200
-    }
-  ],
+  "routes": [],
   "responseOverrides": {
     "404": {
       "rewrite": "/index.html",
       "statusCode": 200
     }
-  },
-  "globalHeaders": {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization"
   }
 }
