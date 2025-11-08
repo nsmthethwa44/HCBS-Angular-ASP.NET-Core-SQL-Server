@@ -3,33 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { AuthResponse } from '../models/userModel';
 import { Observable } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
-// import { tap } from 'rxjs/operators';
-// import { Router } from '@angular/router'
-
-// @Injectable({ providedIn: 'root' })
-// export class AuthService {
-//   private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/auth';
-  
-//   constructor(private http: HttpClient, private router: Router) {}
-
-//   login(email: string, password: string) {
-//     return this.http.post<{ token: string }>(`${this.baseUrl}/login`, { email, password })
-//       .pipe(tap(res => localStorage.setItem('token', res.token)));
-//   }
-
-//   register(data: { fullName: string; email: string; password: string }) {
-//     return this.http.post(`${this.baseUrl}/register`, data);
-//   };
-
-//   logout() {
-//     localStorage.removeItem('token');
-//     this.router.navigate(['/login']);
-//   };
-
-//   isAuthenticated(): boolean {
-//     return !!localStorage.getItem('token');
-//   }
-// }
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -39,10 +12,6 @@ export class AuthService {
   login(email: string, password: string): Observable<AuthResponse[]> {
     return this.http.post<AuthResponse[]>(`${this.baseUrl}/login`, { email, password });
   }
-
-// register(data: any) {
-//   return this.http.post(`${this.baseUrl}/register`, data);
-// }
 
 register(userData: any): Observable<any> {
   return this.http.post(`${this.baseUrl}/register`, userData); 
