@@ -8,7 +8,7 @@
 
     <div class="navbar" [class.active]="isNavBarOpen">
             <ul class="nav">
-                <li><a routerLink="/" routerLinkActive="active" (click)="closeNavbar()">Home</a></li>
+                <li><a routerLink="/" routerLinkActive="active" (click)="closeNavbar()" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
                 <li><a routerLink="/about" routerLinkActive="active" (click)="closeNavbar()">About</a></li>
                 <li><a routerLink="/services" routerLinkActive="active" (click)="closeNavbar()">Services</a></li>
                 <li><a routerLink="/team" routerLinkActive="active" (click)="closeNavbar()">Doctors</a></li>

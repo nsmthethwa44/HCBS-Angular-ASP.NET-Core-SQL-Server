@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReportService {
-    private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/report';
-    
+    private baseUrl = environment.apiUrl + '/report';
     constructor(private http: HttpClient) {}
 
     getAppointmentSummary() {
@@ -35,6 +35,5 @@ export class ReportService {
     getDoctorAppointmentStats(): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/doctor-appointments-summary`);
   }
-
 
 }

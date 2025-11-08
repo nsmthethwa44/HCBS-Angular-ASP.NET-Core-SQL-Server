@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CreateAppointment, Appointment } from '../models/AppointmentModel';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment.development';
 
 @Injectable({ providedIn: 'root' })
 export class AppointmentService {
-  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/appointment';
+  private baseUrl = environment.apiUrl + '/appointment';
 
   constructor(private http: HttpClient) {}
 
