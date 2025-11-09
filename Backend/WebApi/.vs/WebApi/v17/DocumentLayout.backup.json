@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,18 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF2A02E4-A382-44C3-8CC9-BE07D4A6387D}|WebApi.csproj|c:\\users\\user\\desktop\\programming\\web design\\angular\\web apps\\healthcare appointment booking system\\backend\\webapi\\services\\tokenservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,37 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T12:46:06.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAQAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-07T08:01:17.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AppointmentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\DTOs\\AppointmentDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\AppointmentDTO.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\DTOs\\AppointmentDTO.cs",
+              "RelativeToolTip": "DTOs\\AppointmentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T23:53:29.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -85,33 +76,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReportController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\ReportController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\ReportController.cs",
-              "RelativeToolTip": "Controllers\\ReportController.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T08:42:19.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "Controllers\\AppointmentController.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AppointmentController.cs",
               "RelativeToolTip": "Controllers\\AppointmentController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAYwH0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAAAAwBAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T14:25:19.621Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T09:16:10.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "Controllers\\ReportController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T08:42:19.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T12:04:34.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-07T08:01:17.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T12:46:06.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "TokenServices.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Services\\TokenServices.cs",
               "RelativeDocumentMoniker": "Services\\TokenServices.cs",
@@ -120,32 +163,6 @@
               "ViewState": "AgIAAAQAAAAAAAAAAABBwBYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T09:12:40.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAABBwB4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T12:04:34.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\Programming\\Web Design\\Angular\\Web Apps\\Healthcare Appointment Booking System\\Backend\\WebApi\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:16:10.475Z",
               "EditorCaption": ""
             }
           ]
