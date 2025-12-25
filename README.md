@@ -1,62 +1,80 @@
-Healthcare Appointment Booking System - Angular-ASP.NET-Core-SQL-Server
+Healthcare Appointment Booking System - (Angular, ASP.NET Core Web API, SQL Server)
 
-🔹 Overview
+A full-stack healthcare scheduling platform that enables patients to book appointments, doctors to manage availability, and administrators to oversee the system through role-based workflows.
 
-The Healthcare Appointment Booking System is a full-stack web application built with ASP.NET Core Web API, Angular, and SQL Server. It enables patients to book medical appointments, doctors to manage schedules, and administrators to oversee the platform. Designed with a clean, scalable architecture, the system simplifies appointment management, reduces scheduling conflicts, and improves communication between patients and healthcare providers.
+Project Overview:
+- The Healthcare Appointment Booking System digitizes medical appointment management by replacing manual scheduling with a secure, role-driven web platform.
+- Patients can book and track appointments online
+- Doctors manage schedules and upcoming consultations
+- Administrators control users, roles, and reporting
 
-❗ The Problem
+The system was built with clean separation of concerns to ensure predictable behavior, secure access, and long-term maintainability.
 
-Traditional appointment booking often relies on manual phone calls, paper-based scheduling, or outdated systems, which lead to double bookings, inefficient communication, and missed appointments. Administrators struggle to manage doctors’ availability and patients face delays due to lack of transparency.
+User Roles & Flows:
+- Patient:
+	- Register and authenticate securely
+	- Browse available doctors and time slots
+	- Book, view, and track appointment history
+	- Receive appointment status updates
 
-💡 The Solution
+- Doctor:
+	- Manage availability and schedules
+	- View assigned patient appointments
+	- Track daily and upcoming consultations
 
-This system digitizes the entire process by providing:
+- Admin:
+	- Manage doctors and patients
+	- Enforce role-based access
+	- Monitor system usage and reports
 
-Patients: Online appointment booking, view history, and notifications.
+Features:
+- Secure authentication using JWT
+- Role-based dashboards (Patient, Doctor, Admin)
+- Appointment booking and scheduling
+- Doctor availability management
+- Patient appointment history
+- Admin reporting and oversight
 
-Doctors: Schedule management, patient appointment tracking.
+Tech Stack:
+- Frontend:
+	- Angular
+	- TypeScript
+	- SCSS
+	- Angular Router
+	- RxJS
 
-Administrators: Role-based access to manage doctors, patients, and reports.
+- Backend:
+	- ASP.NET Core Web API
+	- C#
+	- Entity Framework Core
+	- LINQ
 
-It uses JWT authentication for secure access, RBAC for role-specific actions, and Entity Framework Core for efficient database interactions.
+- Database:
+	- SQL Server
+	- Architecture & Security
+	- JWT Authentication
+	- Role-Based Access Control (RBAC)
 
-🎯 Key Benefits
+- SOLID principles:
+	- Service / Repository pattern
 
-Efficiency: Reduces scheduling conflicts and manual paperwork.
+Project Structure:
+- /Backend    → ASP.NET Core Web API
+- /hcas        → Angular frontend
+- /db         → SQL scripts
 
-Transparency: Patients, doctors, and admins share a unified view of appointments.
+Setup & Run:
+- Backend:
+	- dotnet restore
+	- dotnet run
 
-Security: JWT authentication and RBAC ensure proper authorization and data privacy.
+- Frontend:
+	- npm install
+	- ng serve
 
-Scalability: Built with SOLID principles and clean code, making the system easy to extend.
+Production Build:
+- ng build --configuration production
 
-🛠 Tech Stack
-
-Backend: ASP.NET Core Web API, C#, Entity Framework Core, LINQ
-
-Frontend: Angular, TypeScript, Angular Router, RxJS
-
-Database: SQL Server
-
-Authentication: JWT Authentication + Role-Based Access Control (RBAC)
-
-Architecture: SOLID Principles, Clean Code, Service/Repository Pattern
-
-🚀 Features
-
-Secure login with JWT authentication
-
-Role-based dashboards (Patient, Doctor, Admin)
-
-Appointment booking and management
-
-Doctor schedule management
-
-Patient appointment history
-
-Admin reporting and oversight
-
-📽 Demo
-
-🔗 Live Demo: Coming Soon
-📂 GitHub Repo: This Repo
+Links:
+- Live Demo: Coming Soon
+- GitHub Repository: This Repo
