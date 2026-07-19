@@ -174,3 +174,4 @@ C:\Users\user\Desktop\Programming\Web Design\Angular\Web Apps\Healthcare Appoint
 C:\Users\user\Desktop\Programming\Web Design\Angular\Web Apps\Healthcare Appointment Booking System\Backend\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json
 C:\Users\user\Desktop\Programming\Web Design\Angular\Web Apps\Healthcare Appointment Booking System\Backend\WebApi\bin\Debug\net8.0\Npgsql.dll
 C:\Users\user\Desktop\Programming\Web Design\Angular\Web Apps\Healthcare Appointment Booking System\Backend\WebApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\user\Desktop\Programming\Web Design\Angular\Web Apps\Healthcare Appointment Booking System\Backend\WebApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

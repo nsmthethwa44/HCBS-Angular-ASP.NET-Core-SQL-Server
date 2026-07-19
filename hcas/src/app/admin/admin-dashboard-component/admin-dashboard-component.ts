@@ -10,7 +10,6 @@ import { PanelListDoctors } from "../../components/panel-list-doctors/panel-list
 import Swal from 'sweetalert2'
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { ReportService } from '../../services/report-service';
-import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -21,7 +20,7 @@ import { environment } from '../../../environments/environment';
   styleUrl: './admin-dashboard-component.scss'
 })
 export class AdminDashboardComponent {
-  baseUrl = environment.apiUrl;
+
  constructor(private http: HttpClient, private service: AdminService, private appointSer: AppointmentService, private reportSer: ReportService) {}
 
   doctors: any[] = [];
@@ -35,10 +34,6 @@ export class AdminDashboardComponent {
 
     // chart options
   view: [number, number] = [700, 220];
-
-    getImageUrl(path: string | undefined): string{
-  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
-}
 
 customColors = (name: string): string => {
   const colors = [ '#E74C3C',  '#dab201',  '#007B83', ];

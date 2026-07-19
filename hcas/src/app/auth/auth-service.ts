@@ -3,11 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { AuthResponse } from '../models/userModel';
 import { Observable } from 'rxjs';
 import { jwtDecode } from 'jwt-decode';
-import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private baseUrl = environment.apiUrl + '/api/auth';
+  private baseUrl = 'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net/api/auth';
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<AuthResponse[]> {

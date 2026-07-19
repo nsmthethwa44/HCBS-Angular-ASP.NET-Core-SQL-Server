@@ -6,7 +6,7 @@ import { environment } from '../../environments/environment.development';
   providedIn: 'root'
 })
 export class AdminService {
-  private baseUrl = environment.apiUrl +  '/api/admin';
+  private baseUrl = environment.apiUrl +  '/admin';
   
   constructor(private http: HttpClient) {}
 
@@ -21,7 +21,7 @@ export class AdminService {
 
   // delete a single user 
     deleteUser(id: number) {
-      return this.http.delete(`${this.baseUrl}/${id}`);
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
 }
