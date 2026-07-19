@@ -3,7 +3,7 @@ import { StatsComponent } from "../../components/stats-component/stats-component
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
 import { ReportService } from '../../services/report-service';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-admin-reports-component',
   standalone: true,
@@ -12,12 +12,18 @@ import { ReportService } from '../../services/report-service';
   styleUrl: './admin-reports-component.scss'
 })
 export class AdminReportsComponent implements OnInit {
+  baseUrl = environment.apiUrl;
+
   constructor(private reportSer: ReportService) {}
 
   appointmentSummaryChart: any[] = [];
   topDoctorsChart: any[] = [];
   topDoctors: any[] = [];
   userSummaryChart: any[] = [];
+
+  getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
   // chart options
   view: [number, number] = [700, 220];

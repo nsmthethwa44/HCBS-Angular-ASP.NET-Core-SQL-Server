@@ -21,6 +21,6 @@ export const SidebarLinks = {
     {icon: "fa-solid fa-bed-pulse", label: 'My Appointments', path: '/patient/appointments' },
     {icon: "a-solid fa-file-lines", label: 'My Reports', path: '/patient/reports' },
     {icon: "fa-solid fa-user-doctor", label: 'Doctors', path: '/patient/doctors' },
-    {icon: "fa-solid fa-user-check", label: 'My Profile', path: '/patient/profile' },
+    {icon: "fa-solid fa-user-check", label: 'Reports', path: '/patient/profile' },
   ]
 };

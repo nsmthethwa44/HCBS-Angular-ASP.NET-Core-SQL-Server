@@ -7,6 +7,7 @@ import { AdminService } from '../../services/admin-service';
 import { AppointmentService } from '../../services/appointment-service';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-book-appointment-component',
@@ -15,6 +16,7 @@ import Swal from 'sweetalert2';
   styleUrl: './book-appointment-component.scss'
 })
 export class BookAppointmentComponent implements OnInit {
+baseUrl = environment.apiUrl;
 
   form: FormGroup;
   doctors: any[] = [];
@@ -23,6 +25,10 @@ export class BookAppointmentComponent implements OnInit {
   searchTerm = '';
   currentPage = 1;
   pageSize = 7;
+
+  getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
   // pagination, search and filter
 get filteredAppointments(): any[] {

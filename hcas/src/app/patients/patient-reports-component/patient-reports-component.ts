@@ -3,7 +3,7 @@ import { PatientStatsComponent } from "../patient-stats-component/patient-stats-
 import { ReportService } from '../../services/report-service';
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-patient-reports-component',
   imports: [PatientStatsComponent, NgxChartsModule, CommonModule],
@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './patient-reports-component.scss'
 })
 export class PatientReportsComponent implements OnInit{
+baseUrl = environment.apiUrl;
 
   constructor(private reportSer: ReportService){}
   appointmentStatusChart: any[] = [];
@@ -18,6 +19,10 @@ export class PatientReportsComponent implements OnInit{
 
     // chart options
   view: [number, number] = [700, 220];
+
+  getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
 customColors = (name: string): string => {
   const colors = [ '#E74C3C',  '#dab201',  '#007B83', ];

@@ -6,6 +6,7 @@ using System;
 using System.Text;
 using WebApi.Data;
 using WebApi.Services;
+using Microsoft.Extensions.FileProviders;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +17,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
+// builder.Services.AddDbContext<AppDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DbConnection")));
 
 
@@ -41,18 +42,25 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddScoped<TokenServices>();
 
+// CORS config
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
         policy.AllowAnyHeader()
               .AllowAnyMethod()
               .AllowCredentials()
-              .WithOrigins("https://happy-ground-0a36d730f.3.azurestaticapps.net"));
+              .WithOrigins("http://localhost:4200"));
 });
 
 
-
 var app = builder.Build();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.ContentRootPath, "wwwroot", "images")),
+    RequestPath = "/images"
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

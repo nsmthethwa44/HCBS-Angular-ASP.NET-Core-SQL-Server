@@ -3,6 +3,7 @@ import { DoctorStatsComponent } from "../doctor-stats-component/doctor-stats-com
 import { CommonModule } from '@angular/common';
 import { ReportService } from '../../services/report-service';
 import { NgxChartsModule} from '@swimlane/ngx-charts';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-doctor-reports-component',
@@ -11,11 +12,17 @@ import { NgxChartsModule} from '@swimlane/ngx-charts';
   styleUrl: './doctor-reports-component.scss'
 })
 export class DoctorReportsComponent {
+  baseUrl = environment.apiUrl;
+
   constructor(private reportSer: ReportService) {}
    stats: any = {}; 
   appointmentStatsBar: any[] = [];
   appointmentStatsPie: any[] = [];
    topDoctors: any[] = [];
+
+    getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
   colorScheme = {
     domain: ['#28a745', '#ffc107', '#dc3545']

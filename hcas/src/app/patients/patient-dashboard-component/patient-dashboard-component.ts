@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AppointmentService } from '../../services/appointment-service';
 import { PatientStatsComponent } from "../patient-stats-component/patient-stats-component";
 import { PanelListDoctors } from "../../components/panel-list-doctors/panel-list-doctors";
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-patient-dashboard-component',
@@ -12,6 +13,7 @@ import { PanelListDoctors } from "../../components/panel-list-doctors/panel-list
   styleUrl: './patient-dashboard-component.scss'
 })
 export class PatientDashboardComponent {
+  baseUrl = environment.apiUrl;
    constructor( private appointSer: AppointmentService){};
 
   appointments: any[] = [];
@@ -23,6 +25,10 @@ export class PatientDashboardComponent {
     this.upcomingAppointments = res;
   });
   }
+
+   getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
 
   getAppointments(){

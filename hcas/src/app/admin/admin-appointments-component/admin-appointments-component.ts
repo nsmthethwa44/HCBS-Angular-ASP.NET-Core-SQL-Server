@@ -5,6 +5,7 @@ import { OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2'
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin-appointments-component',
@@ -13,12 +14,17 @@ import Swal from 'sweetalert2'
   styleUrl: './admin-appointments-component.scss'
 })
 export class AdminAppointmentsComponent  implements OnInit{
-  
+  baseUrl = environment.apiUrl;
+
   appointments: any[] = [];
   selectedStatus: string = '';
   searchTerm = '';
   currentPage = 1;
   pageSize = 12;
+
+     getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
   // pagination, search and filter
 get filteredAppointments(): any[] {

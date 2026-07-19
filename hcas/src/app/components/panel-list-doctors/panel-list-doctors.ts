@@ -3,6 +3,7 @@ import { AdminService } from '../../services/admin-service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../auth/auth-service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-panel-list-doctors',
@@ -11,10 +12,15 @@ import { AuthService } from '../../auth/auth-service';
   styleUrl: './panel-list-doctors.scss'
 })
 export class PanelListDoctors implements OnInit{
+  baseUrl = environment.apiUrl;
   constructor(private service: AdminService, private auth: AuthService){}
 
   doctors: any[] = [];
   doctorsLink: string = "";
+
+    getImageUrl(path: string | undefined): string{
+  return path ? `${this.baseUrl}${path}` : "assets/img/img-3.jpg"
+}
 
   getLink(){
     const role = this.auth.getUserRole();
