@@ -5,6 +5,7 @@ import { OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import Swal from 'sweetalert2'
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin-appointments-component',
@@ -19,6 +20,11 @@ export class AdminAppointmentsComponent  implements OnInit{
   searchTerm = '';
   currentPage = 1;
   pageSize = 12;
+  baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
   // pagination, search and filter
 get filteredAppointments(): any[] {

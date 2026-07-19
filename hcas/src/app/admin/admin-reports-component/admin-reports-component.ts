@@ -3,6 +3,7 @@ import { StatsComponent } from "../../components/stats-component/stats-component
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
 import { ReportService } from '../../services/report-service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-admin-reports-component',
@@ -18,6 +19,11 @@ export class AdminReportsComponent implements OnInit {
   topDoctorsChart: any[] = [];
   topDoctors: any[] = [];
   userSummaryChart: any[] = [];
+  baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
   // chart options
   view: [number, number] = [700, 220];

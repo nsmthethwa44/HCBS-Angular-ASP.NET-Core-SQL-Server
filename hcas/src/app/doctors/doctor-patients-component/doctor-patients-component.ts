@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppointmentService } from '../../services/appointment-service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-doctor-patients-component',
@@ -13,6 +14,11 @@ export class DoctorPatientsComponent {
 
   date!: number;
   approvedPatients: any[] = [];
+  baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
 loadApprovedPatients(): void {
   this.appointSer.getDoctorApprovedPatients().subscribe(res => {

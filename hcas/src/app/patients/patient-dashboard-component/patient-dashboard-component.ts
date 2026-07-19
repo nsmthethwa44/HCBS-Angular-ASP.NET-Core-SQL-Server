@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AppointmentService } from '../../services/appointment-service';
 import { PatientStatsComponent } from "../patient-stats-component/patient-stats-component";
 import { PanelListDoctors } from "../../components/panel-list-doctors/panel-list-doctors";
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-patient-dashboard-component',
@@ -17,6 +18,11 @@ export class PatientDashboardComponent {
   appointments: any[] = [];
   date!: number;
   upcomingAppointments: any[] = []; // as approved appointments
+baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
   getApproved(){
      this.appointSer.getApprovedAppointments().subscribe(res => {

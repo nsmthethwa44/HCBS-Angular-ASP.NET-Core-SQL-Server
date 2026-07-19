@@ -3,6 +3,7 @@ import { PatientStatsComponent } from "../patient-stats-component/patient-stats-
 import { ReportService } from '../../services/report-service';
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-patient-reports-component',
@@ -15,7 +16,12 @@ export class PatientReportsComponent implements OnInit{
   constructor(private reportSer: ReportService){}
   appointmentStatusChart: any[] = [];
   topDoctors: any[] = [];
+baseUrl = environment.apiUrl;
 
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
+  
     // chart options
   view: [number, number] = [700, 220];
 

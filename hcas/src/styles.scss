@@ -3175,6 +3175,34 @@ input[type="file"]::-webkit-file-upload-button{
 }
 // end scroll top 
 
+// loader 
+
+ .loading {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .loader{
+        width: 3rem;
+        height: 3rem;
+        background: var(--accent);
+        border-radius: 50%;
+        border: 5px solid var(--border-color);
+        animation: pulse 1.5s infinite ease-in-out;
+        box-shadow: var(--box-shadow);
+
+        @keyframes pulse {
+            0% {opacity: 0.6; }
+            50% {opacity: 1; }
+            100% {opacity: 0.6; transform: rotate(360deg);}
+            
+        }
+    }
+  }
+//   end loader 
+
 // ##### Small devices #####
 @media screen and (max-width: 1356px) {
     .sidebar{

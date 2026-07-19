@@ -9,10 +9,13 @@
 <section class="section team-page">
     <div class="container">
         <div class="container-box">
-              @for (item of doctors.slice(0, 8); track $index) {
+            @if (doctors.length == 0) {
+                <app-loader></app-loader>
+            }@else {
+                @for (item of doctors.slice(0, 8); track $index) {
                 <div class="box">
                     <div class="box-img">
-                         <img [src]="'https://hcbsapi-gqb6eahuccaufrgh.southafricanorth-01.azurewebsites.net' + item.profileImagePath" alt="Profile" class="img-box">
+                         <img [src]="`${getImageUrl(item?.profileImagePath)}`" alt="Profile" class="img-box">
                         <div class="sci">
                             <i class="fa-brands fa-facebook-f"></i>
                             <i class="fa-brands fa-twitter"></i>
@@ -25,6 +28,8 @@
                     </div>
                 </div>
             }
+            }
+              
         </div>
     </div>
 </section>

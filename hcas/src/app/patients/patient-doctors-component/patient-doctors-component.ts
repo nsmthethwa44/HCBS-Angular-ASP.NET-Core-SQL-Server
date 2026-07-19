@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminService } from '../../services/admin-service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-patient-doctors-component',
@@ -12,6 +13,11 @@ export class PatientDoctorsComponent {
   constructor(private adminSer: AdminService){}
    date!: number;
    doctors: any[] = [];
+   baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
    getDoctors(){
     this.adminSer.getDoctors().subscribe((res) =>{

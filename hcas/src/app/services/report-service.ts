@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment.development';
   providedIn: 'root'
 })
 export class ReportService {
-    private baseUrl = environment.apiUrl + '/report';
+    private baseUrl = environment.apiUrl + '/api/report';
     constructor(private http: HttpClient) {}
 
     getAppointmentSummary() {

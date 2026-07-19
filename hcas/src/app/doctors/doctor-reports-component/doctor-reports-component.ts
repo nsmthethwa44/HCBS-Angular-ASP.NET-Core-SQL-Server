@@ -3,6 +3,7 @@ import { DoctorStatsComponent } from "../doctor-stats-component/doctor-stats-com
 import { CommonModule } from '@angular/common';
 import { ReportService } from '../../services/report-service';
 import { NgxChartsModule} from '@swimlane/ngx-charts';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-doctor-reports-component',
@@ -16,6 +17,11 @@ export class DoctorReportsComponent {
   appointmentStatsBar: any[] = [];
   appointmentStatsPie: any[] = [];
    topDoctors: any[] = [];
+   baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
   colorScheme = {
     domain: ['#28a745', '#ffc107', '#dc3545']

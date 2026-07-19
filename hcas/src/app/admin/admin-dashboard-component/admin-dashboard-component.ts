@@ -10,6 +10,7 @@ import { PanelListDoctors } from "../../components/panel-list-doctors/panel-list
 import Swal from 'sweetalert2'
 import { NgxChartsModule} from '@swimlane/ngx-charts';
 import { ReportService } from '../../services/report-service';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -31,6 +32,11 @@ export class AdminDashboardComponent {
   topDoctors: any[] = []
   userSummaryChart: any[] = [];
   date!: number;
+  baseUrl = environment.apiUrl;
+
+  getImageUrl(path: string){
+    return (`${this.baseUrl}/${path}`)
+  }
 
     // chart options
   view: [number, number] = [700, 220];
