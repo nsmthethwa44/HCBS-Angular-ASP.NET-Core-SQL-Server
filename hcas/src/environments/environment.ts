@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: "http://localhost:5042"
+    apiUrl: "https://hcbs-angular-asp-net-core-sql-server.onrender.com"
 };

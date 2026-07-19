@@ -1,6 +1,6 @@
 [build]
-  base = "estateflow"
-  publish = "dist/estateflow/browser"
+  base = "hcas"
+  publish = "dist/hcas/browser"
   command = "npm install && npm run build"
   
 [[redirects]]
