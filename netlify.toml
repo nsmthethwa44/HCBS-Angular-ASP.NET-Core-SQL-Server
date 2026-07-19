@@ -1,0 +1,9 @@
+[build]
+  base = "estateflow"
+  publish = "dist/estateflow/browser"
+  command = "npm install && npm run build"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
